@@ -31,3 +31,10 @@ Project Goals/Aims
  * A well-defined service backend specification that our existing PHP implementation will satisfy, but will allow for future .net and Java implementations to be easily implemented
  * Dropping MapServer support and MapServer-specific widgets. fusion-next will be 100% for MapGuide
  * More TBD
+
+Widgets currently implemented in fusion-next
+============================================
+
+ * Zoom In
+ * Zoom Out
+ * About
