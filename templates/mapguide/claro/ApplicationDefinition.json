@@ -1457,7 +1457,7 @@
               }
             ],
             "ImageClass": [
-              "Maptip"
+              "maptip"
             ],
             "ImageUrl": [
               "images/maptip.png"
@@ -1717,7 +1717,7 @@
                 ]
               }
             ],
-            "ImageClass": null,
+            "ImageClass": "file-print",
             "ImageUrl": [
               "images/icons/print.png"
             ],
