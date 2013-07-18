@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Claro Wireframe</title>
+        <link rel="stylesheet" href="../../../lib/dijit/themes/claro/claro.css">
+        <style type="text/css">
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                overflow:hidden;
+                font-family: Verdana,Arial,Helvetica,sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 85%;
+            }
+
+            #MapArea { padding: 0; }
+            #Map { width: 100%; height: 100%; }
+
+            #AppContainer {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <script type="text/javascript" src="../../../lib/dojo/dojo.js.uncompressed.js" data-dojo-config="async: true, parseOnLoad: true"></script>
+        <script>
+            require([
+                "dojo/ready",
+                "dojo/parser", 
+                "dijit/layout/ContentPane", 
+                "dijit/layout/BorderContainer", 
+                "dijit/layout/TabContainer", 
+                "dijit/layout/AccordionContainer", 
+                "dijit/layout/AccordionPane",
+                "dijit/Toolbar",
+                "dojo/topic",
+                "fusion/core"
+            ], function() {
+                var ready = arguments[0];
+                var topic = arguments[8];
+                var Fusion = arguments[9];
+                ready(function() {
+                    topic.subscribe(Fusion.Events.FUSION_INITIALIZED, function() {
+                        console.log("Fusion initialized");
+                    });
+                    Fusion.initialize();
+                });
+            });
+        </script>
+    </head>
+    <body class="claro">
+        <div id="AppContainer" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false, liveSplitters:false">
+            <div id="Sidebar" data-dojo-type="dijit/layout/AccordionContainer" data-dojo-props="minSize:20, region:'leading', splitter:true" style="width: 300px;">
+                <div data-dojo-type="dijit/layout/AccordionPane" title="Legend">
+                    <div id="Legend">
+                    </div>
+                </div>
+                <div data-dojo-type="dijit/layout/AccordionPane" title="Selection">
+                    <div id="SelectionPanel">
+                    </div>
+                </div>
+                <div data-dojo-type="dijit/layout/AccordionPane" title="Task Pane" selected="true">
+                    <div id="TaskPane">
+                    </div>
+                </div>
+            </div><!-- end AccordionContainer -->
+            <div id="Main" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region:'center', splitter:false, gutters: false">
+                <div id="FileMenu" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
+                    <!-- 
+                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
+                        <span>Color</span>
+                        <div data-dojo-type="dijit/ColorPalette"></div>
+                    </div>
+                -->
+                </div>
+                <div id="Toolbar" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
+                    <!--
+                    <div data-dojo-type="dijit/form/Button" id="toolbar1.cut"
+                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel:false">Cut</div
+                    ><div data-dojo-type="dijit/form/Button" id="toolbar1.copy"
+                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy', showLabel:false">Copy</div
+                    ><div data-dojo-type="dijit/form/Button" id="toolbar1.paste"
+                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste', showLabel:false">Paste</div
+                    >--><!-- The following adds a line between toolbar sections
+                        --><!--<span data-dojo-type="dijit/ToolbarSeparator"></span
+                     ><div data-dojo-type="dijit/form/ToggleButton" id="toolbar1.bold"
+                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">Bold</div>
+                    -->
+                </div>
+                <div id="ToolbarSecondary" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
+                    <!--
+                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
+                        <span>Color</span>
+                        <div data-dojo-type="dijit/ColorPalette"></div>
+                    </div>
+                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
+                        <span>Dialog</span>
+                        <div data-dojo-type="dijit/TooltipDialog">
+                            <label for="first">First name:</label> <input data-dojo-type="dijit/form/TextBox" name="first" id="first"/>
+                            <br/>
+                            <label for="last">Last name:</label> <input data-dojo-type="dijit/form/TextBox" name="last" id="last"/>
+                        </div>
+                    </div>
+                -->
+                </div>
+                <div id="MapArea" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', splitter:false">
+                    <div id="Map">
+
+                    </div>
+                </div><!-- end Map -->
+            </div><!-- end Main -->
+            <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom', splitter:false">
+                STATUS BAR
+            </div>
+        </div><!-- end BorderContainer -->
+    </body>
+</html>
