@@ -35,7 +35,8 @@ Project Goals/Aims
 Widgets currently implemented in fusion-next
 ============================================
 
- * Zoom In
- * Zoom Out
  * About
  * Invoke Script
+ * Refresh Map
+ * Zoom In
+ * Zoom Out

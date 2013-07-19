@@ -9,7 +9,19 @@
     "@xsi:noNamespaceSchemaLocation": [
       "ApplicationDefinition-1.0.0.xsd"
     ],
-    "Extension": null,
+    "Extension": [
+      {
+        "GoogleScript": [
+          "http://maps.google.com/maps/api/js?sensor=false"
+        ],
+        "OpenStreetMapScript": [
+          "http://www.openstreetmap.org/openlayers/OpenStreetMap.js"
+        ],
+        "VirtualEarthScript": [
+          "http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.2"
+        ]
+      }
+    ],
     "MapSet": [
       {
         "MapGroup": [
@@ -21,8 +33,21 @@
               {
                 "Extension": [
                   {
+                    "Options": [
+                      {
+                        "isBaseLayer": [
+                          "false"
+                        ],
+                        "projection": [
+                          "EPSG:900913"
+                        ],
+                        "useOverlay": [
+                          "true"
+                        ]
+                      }
+                    ],
                     "ResourceId": [
-                      "Library://Samples/Sheboygan/Maps/Sheboygan.MapDefinition"
+                      "Library://Samples/Sheboygan/Maps/Commercial.MapDefinition"
                     ]
                   }
                 ],
@@ -31,6 +56,72 @@
                 ],
                 "Type": [
                   "MapGuide"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map"
+                        ],
+                        "type": [
+                          "Mapnik"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map (TransportMap)"
+                        ],
+                        "type": [
+                          "TransportMap"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map (CycleMap)"
+                        ],
+                        "type": [
+                          "CycleMap"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
                 ]
               }
             ]
@@ -1457,7 +1548,7 @@
               }
             ],
             "ImageClass": [
-              "maptip"
+              "Maptip"
             ],
             "ImageUrl": [
               "images/maptip.png"
