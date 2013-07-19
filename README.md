@@ -36,6 +36,7 @@ Widgets currently implemented in fusion-next
 ============================================
 
  * About
+ * Cursor Position
  * Invoke Script
  * Refresh Map
  * Zoom In
