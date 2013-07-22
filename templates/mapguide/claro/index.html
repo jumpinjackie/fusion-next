@@ -15,7 +15,7 @@
                 font-weight: normal;
                 font-size: 85%;
             }
-
+            .fusionErrorDialog { width: 600px; height: 300px; overflow: auto; font-size: 10pt; }
             #MapArea { padding: 0; }
             #Map { width: 100%; height: 100%; }
             #AppContainer {
@@ -41,18 +41,53 @@
                 "dijit/layout/AccordionPane",
                 "dijit/Toolbar",
                 "dojo/topic",
-                "fusion/core"
+                "fusion/core",
+                "dijit/Dialog"
             ], function() {
                 var ready = arguments[0];
                 var topic = arguments[8];
                 var Fusion = arguments[9];
                 ready(function() {
-                    topic.subscribe(Fusion.Events.FUSION_INITIALIZED, function() {
-                        console.log("Fusion initialized");
-                    });
+                    topic.subscribe(Fusion.Events.FUSION_INITIALIZED, onFusionInitialized);
+                    topic.subscribe(Fusion.Events.FUSION_ERROR, onFusionError);
                     Fusion.initialize();
                 });
             });
+
+            var errorDialog = null;
+
+            function onFusionInitialized() {
+                console.log("Fusion initialized");
+            }
+
+            function onFusionError(error) {
+                var msg = "";
+                if (error.response) { //Rejected promise on an XHR request
+                    if (error.response.text) {
+                        if (error.response.url) {
+                            msg += "Error making request to URL: " + error.response.url;
+                        }
+                        msg += "<br/><br/>" + error.response.text;
+                    }
+                } else {
+                    msg = error.stack || error.message || error;
+                    msg = msg.replace("\r\n", "<br/>").replace("\n", "<br/>");
+                }
+                if (msg.length > 0) {
+                    var content = "<div class='fusionErrorDialog'><pre>";
+                    content += msg;
+                    content += "</pre></div>";
+
+                    var Dialog = require("dijit/Dialog"); //This was pre-loaded in the above require() call, so it's safe to do this here
+                    errorDialog = new Dialog({
+                        title: "Fusion Error",
+                        content: content
+                    });
+                    errorDialog.show();
+                } else {
+                    console.error(error);
+                }
+            }
 
             function showOverviewMap() {
                 alert("Show overview map");
