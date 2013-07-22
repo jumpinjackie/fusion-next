@@ -42,3 +42,14 @@ Widgets currently implemented in fusion-next
  * View Size
  * Zoom In
  * Zoom Out
+
+Unknowns to address/determine
+=============================
+
+ * How to load scripts the classic non-AMD way (required for Google Maps/Bing/OSM integration)
+ * How to load external css stylesheets (for widgets)
+ * How to replicate the features of older templates
+    * Status bar
+    * Collapsible sidebar
+    * Floating windows (ala. Aqua)
+    * Vertical toolbars

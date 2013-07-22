@@ -1548,7 +1548,7 @@
               }
             ],
             "ImageClass": [
-              "Maptip"
+              "maptip"
             ],
             "ImageUrl": [
               "images/maptip.png"
@@ -1810,7 +1810,7 @@
             ],
             "ImageClass": "file-print",
             "ImageUrl": [
-              "images/icons/print.png"
+              "images/icons.png"
             ],
             "Label": [
               "Quick Plot"
@@ -2569,8 +2569,8 @@
                 ]
               }
             ],
-            "ImageClass": null,
-            "ImageUrl": null,
+            "ImageClass": "invoke-script",
+            "ImageUrl": "images/icons.png",
             "Label": [
               "Show Overview"
             ],
@@ -2598,8 +2598,8 @@
                 ]
               }
             ],
-            "ImageClass": null,
-            "ImageUrl": null,
+            "ImageClass": "invoke-script",
+            "ImageUrl": "images/icons.png",
             "Label": [
               "Show Task Pane"
             ],
@@ -2627,8 +2627,8 @@
                 ]
               }
             ],
-            "ImageClass": null,
-            "ImageUrl": null,
+            "ImageClass": "invoke-script",
+            "ImageUrl": "images/icons.png",
             "Label": [
               "Show Legend"
             ],
@@ -2656,8 +2656,8 @@
                 ]
               }
             ],
-            "ImageClass": null,
-            "ImageUrl": null,
+            "ImageClass": "invoke-script",
+            "ImageUrl": "images/icons.png",
             "Label": [
               "Show Selection Panel"
             ],
