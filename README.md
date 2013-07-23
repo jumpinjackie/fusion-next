@@ -41,10 +41,12 @@ Widgets currently implemented in fusion-next
  * About
  * Cursor Position
  * Invoke Script
+ * Pan
  * Refresh Map
  * View Size
  * Zoom In
  * Zoom Out
+ * Zoom (Rectangle)
 
 Unknowns to address/determine/research
 ======================================
