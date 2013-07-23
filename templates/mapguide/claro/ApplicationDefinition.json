@@ -11,209 +11,118 @@
     ],
     "Extension": [
       {
-        "GoogleScript": [
-          "https://maps.googleapis.com/maps/api/js?sensor=false"
-        ],
         "OpenStreetMapScript": [
           "http://www.openstreetmap.org/openlayers/OpenStreetMap.js"
         ]
       }
     ],
-    "MapSet":[
-         {
-            "MapGroup":[
-               {
-                  "@id":[
-                     "MainMap"
-                  ],
-                  "Map":[
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "isBaseLayer":[
-                                       "false"
-                                    ],
-                                    "projection":[
-                                       "EPSG:900913"
-                                    ],
-                                    "useOverlay":[
-                                       "true"
-                                    ]
-                                 }
-                              ],
-                              "ResourceId":[
-                                 "Library://Samples/Sheboygan/Maps/Commercial.MapDefinition"
-                              ]
-                           }
+    "MapSet": [
+      {
+        "MapGroup": [
+          {
+            "@id": [
+              "MainMap"
+            ],
+            "Map": [
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "isBaseLayer": [
+                          "false"
                         ],
-                        "SingleTile":[
-                           "True"
+                        "projection": [
+                          "EPSG:900913"
                         ],
-                        "Type":[
-                           "MapGuide"
+                        "useOverlay": [
+                          "true"
                         ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Google Streets"
-                                    ],
-                                    "type":[
-                                       "G_NORMAL_MAP"
-                                    ]
-                                 }
-                              ]
-                           }
+                      }
+                    ],
+                    "ResourceId": [
+                      "Library://Samples/Sheboygan/Maps/Commercial.MapDefinition"
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "True"
+                ],
+                "Type": [
+                  "MapGuide"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map"
                         ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "Google"
+                        "type": [
+                          "Mapnik"
                         ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Google Satellite"
-                                    ],
-                                    "type":[
-                                       "G_SATELLITE_MAP"
-                                    ]
-                                 }
-                              ]
-                           }
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map (TransportMap)"
                         ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "Google"
+                        "type": [
+                          "TransportMap"
                         ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Google Hybrid"
-                                    ],
-                                    "type":[
-                                       "G_HYBRID_MAP"
-                                    ]
-                                 }
-                              ]
-                           }
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
+                ]
+              },
+              {
+                "Extension": [
+                  {
+                    "Options": [
+                      {
+                        "name": [
+                          "Open Street Map (CycleMap)"
                         ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "Google"
+                        "type": [
+                          "CycleMap"
                         ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Google Physical"
-                                    ],
-                                    "type":[
-                                       "G_PHYSICAL_MAP"
-                                    ]
-                                 }
-                              ]
-                           }
-                        ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "Google"
-                        ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Open Street Map"
-                                    ],
-                                    "type":[
-                                       "Mapnik"
-                                    ]
-                                 }
-                              ]
-                           }
-                        ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "OpenStreetMap"
-                        ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Open Street Map (TransportMap)"
-                                    ],
-                                    "type":[
-                                       "TransportMap"
-                                    ]
-                                 }
-                              ]
-                           }
-                        ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "OpenStreetMap"
-                        ]
-                     },
-                     {
-                        "Extension":[
-                           {
-                              "Options":[
-                                 {
-                                    "name":[
-                                       "Open Street Map (CycleMap)"
-                                    ],
-                                    "type":[
-                                       "CycleMap"
-                                    ]
-                                 }
-                              ]
-                           }
-                        ],
-                        "SingleTile":[
-                           "true"
-                        ],
-                        "Type":[
-                           "OpenStreetMap"
-                        ]
-                     }
-                  ]
-               }
+                      }
+                    ]
+                  }
+                ],
+                "SingleTile": [
+                  "true"
+                ],
+                "Type": [
+                  "OpenStreetMap"
+                ]
+              }
             ]
-         }
-      ],
+          }
+        ]
+      }
+    ],
     "TemplateUrl": [
       "fusion/templates/mapguide/slate/index.html"
     ],
