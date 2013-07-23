@@ -37,7 +37,7 @@ if(InitializationErrorOccurred())
     DisplayInitializationErrorText();
     exit;
 }
-include('../../../common/php/Utilities.php');
+include('../../common/php/Utilities.php');
 include('Utilities.php');
 
 //This flag indicates whether to pre-cache the legend icons (in the form of data URIs that will be written back as part of the JSON response)

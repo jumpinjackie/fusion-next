@@ -145,53 +145,21 @@
                     <div id="SelectionPanel">
                     </div>
                 </div>
-                <div data-dojo-type="dijit/layout/AccordionPane" title="Task Pane" selected="true">
+                <div data-dojo-type="dijit/layout/AccordionPane" title="Task Pane">
                     <div id="TaskPane">
                     </div>
                 </div>
             </div><!-- end AccordionContainer -->
             <div id="Main" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region:'center', splitter:false, gutters: false">
                 <div id="FileMenu" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
-                    <!-- 
-                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
-                        <span>Color</span>
-                        <div data-dojo-type="dijit/ColorPalette"></div>
-                    </div>
-                -->
                 </div>
                 <div id="Toolbar" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
-                    <!--
-                    <div data-dojo-type="dijit/form/Button" id="toolbar1.cut"
-                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCut', showLabel:false">Cut</div
-                    ><div data-dojo-type="dijit/form/Button" id="toolbar1.copy"
-                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconCopy', showLabel:false">Copy</div
-                    ><div data-dojo-type="dijit/form/Button" id="toolbar1.paste"
-                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconPaste', showLabel:false">Paste</div
-                    >--><!-- The following adds a line between toolbar sections
-                        --><!--<span data-dojo-type="dijit/ToolbarSeparator"></span
-                     ><div data-dojo-type="dijit/form/ToggleButton" id="toolbar1.bold"
-                        data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">Bold</div>
-                    -->
                 </div>
                 <div id="ToolbarSecondary" data-dojo-type="dijit/Toolbar" data-dojo-props="region: 'top', splitter: false">
-                    <!--
-                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconBold', showLabel:false">
-                        <span>Color</span>
-                        <div data-dojo-type="dijit/ColorPalette"></div>
-                    </div>
-                    <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'dijitEditorIcon dijitEditorIconItalic', showLabel:false">
-                        <span>Dialog</span>
-                        <div data-dojo-type="dijit/TooltipDialog">
-                            <label for="first">First name:</label> <input data-dojo-type="dijit/form/TextBox" name="first" id="first"/>
-                            <br/>
-                            <label for="last">Last name:</label> <input data-dojo-type="dijit/form/TextBox" name="last" id="last"/>
-                        </div>
-                    </div>
-                -->
                 </div>
                 <div id="MapArea" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center', splitter:false">
                     <div id="Map">
-
+                        <div id="Navigator"></div>
                     </div>
                 </div><!-- end Map -->
             </div><!-- end Main -->
