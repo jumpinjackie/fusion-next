@@ -14,6 +14,7 @@ Why are we rebuilding Fusion from scratch?
  * The use of JxLib/MooTools hampers our ability to integrate with external libraries like jQuery or upgrade to newer versions of OpenLayers with ease and minimal conflict.
  * We have issues with modularity due to lack of proper AMD (asynchronous module definition) support.
  * Fusion has accumulated many years of cruft, hacks and workarounds.
+ * Fusion has widget feature creep with plenty of half-implemented widget features that only work under certain conditions
 
 fusion-next is built on top of the following libraries/frameworks:
 
