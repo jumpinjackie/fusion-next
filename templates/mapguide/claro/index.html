@@ -22,10 +22,11 @@
                 width: 100%;
                 height: 100%;
             }
-            #StatusArea { padding: 0px !important; font-size: 0.8em; }
+            #StatusArea { padding: 0px !important; font-size: 0.8em; height: 24px; width: 100%; }
             #StatusArea div { display: inline; overflow-y: hidden; }
             #StatusArea .dijitContentPane { padding: 0px !important; }
-            #Statusbar { float: left; }
+            #Statusbar { width: 100%; height: 100%; }
+            #Statusbar .statusbar-container { padding: 0; margin: 0; width: 100%; height: 100%; }
             #pbmg { float: right; }
 
             /* Cursor Position */
@@ -121,15 +122,33 @@
             }
 
             function showTaskPane() {
-                alert("Show task pane");
+                require(["dojo/query", "dijit/registry", "dojo/NodeList-traverse"], function() {
+                    var query = arguments[0];
+                    var registry = arguments[1];
+                    var domCnt = registry.byNode(query("#TaskPane").parent()[0]);
+                    var sidebar = registry.byId("Sidebar");
+                    sidebar.selectChild(domCnt);
+                });
             }
 
             function showLegend() {
-                alert("Show legend");
+                require(["dojo/query", "dijit/registry", "dojo/NodeList-traverse"], function() {
+                    var query = arguments[0];
+                    var registry = arguments[1];
+                    var domCnt = registry.byNode(query("#Legend").parent()[0]);
+                    var sidebar = registry.byId("Sidebar");
+                    sidebar.selectChild(domCnt);
+                });
             }
 
             function showSelectionPanel() {
-                alert("Show selection panel");
+                require(["dojo/query", "dijit/registry", "dojo/NodeList-traverse"], function() {
+                    var query = arguments[0];
+                    var registry = arguments[1];
+                    var domCnt = registry.byNode(query("#SelectionPanel").parent()[0]);
+                    var sidebar = registry.byId("Sidebar");
+                    sidebar.selectChild(domCnt);
+                });
             }
 
         </script>
@@ -163,9 +182,8 @@
                     </div>
                 </div><!-- end Map -->
             </div><!-- end Main -->
-            <div id="StatusArea" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
-                <div id="Statusbar" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'left'">
-                    
+            <div id="StatusArea" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="region:'bottom'">
+                <div id="Statusbar" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom'">
                 </div>
                 <div id="pbmg" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
                     <img src="../../../assets/pbmg.png" />
