@@ -16,10 +16,7 @@ Why are we rebuilding Fusion from scratch?
  * Fusion has accumulated many years of cruft, hacks and workarounds.
  * Fusion has widget feature creep with plenty of half-implemented widget features that only work under certain conditions
 
-fusion-next is built on top of the following libraries/frameworks:
-
- * dojo toolkit 1.9.1
- * OpenLayers 2.13.1
+fusion-next is built on the main pillars of OpenLayers and dojo toolkit.
 
 Building fusion-next on top of dojo toolkit gives us a proverbial kitchen sink of UI components, DOM, event, AJAX, effects and animation libraries all through the power of AMD modules, allowing us to pick and choose the bits we're after.
 
@@ -35,6 +32,13 @@ Project Goals/Aims
  * Dropping MapServer support and MapServer-specific widgets. fusion-next will be 100% for MapGuide
  * JSON will be the default and expected data interchange format for all web services and mapagent communication. There will be _ZERO_ use of XML and/or conversion to JSON from XML.
  * More TBD
+
+Thirdparty Libraries/Frameworks used to implement fusion-next
+=============================================================
+
+ * OpenLayers 2.13.1 (http://www.openlayers.org)
+ * dojo toolkit 1.9.1 (http://www.dojotoolkit.org)
+ * URI.js (http://medialize.github.io/URI.js/)
 
 Widgets currently implemented in fusion-next
 ============================================
