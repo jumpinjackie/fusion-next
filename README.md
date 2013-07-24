@@ -49,6 +49,11 @@ Widgets currently implemented in fusion-next
  * Zoom Out
  * Zoom (Rectangle)
 
+Widgets partially implemented in fusion-next
+============================================
+
+ * Navigator
+
 Unknowns to address/determine/research
 ======================================
 
