@@ -46,6 +46,7 @@ Widgets currently implemented in fusion-next
 
  * About
  * Cursor Position
+ * Editable Scale
  * Invoke Script
  * Pan
  * Refresh Map
@@ -57,7 +58,7 @@ Widgets currently implemented in fusion-next
 Widgets partially implemented in fusion-next
 ============================================
 
- * Navigator
+ * Navigator (slider doesn't work yet)
 
 Unknowns to address/determine/research
 ======================================
