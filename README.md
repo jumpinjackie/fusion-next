@@ -37,6 +37,7 @@ Thirdparty Libraries/Frameworks used to implement fusion-next
 =============================================================
 
  * OpenLayers 2.13.1 (http://www.openlayers.org)
+ * Proj4js (http://trac.osgeo.org/proj4js/)
  * dojo toolkit 1.9.1 (http://www.dojotoolkit.org)
  * URI.js (http://medialize.github.io/URI.js/)
 
