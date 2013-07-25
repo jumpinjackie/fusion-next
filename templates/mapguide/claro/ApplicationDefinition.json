@@ -1313,7 +1313,7 @@
               }
             ],
             "ImageClass": [
-              "featureinfo"
+              "feature-info"
             ],
             "ImageUrl": [
               "images/icons.png"

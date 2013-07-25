@@ -1,9 +1,21 @@
 <html>
 <head>
-	<script type="text/css">
-		require(["fusion/core"], function(Fusion) {
-			console.log("Task Pane loaded");
-		});
+    <link rel="stylesheet" href="TaskPane.css" />
+	<script type="text/javascript">
+		
+        //Find out who has the AMD loader
+        var root;
+        if (opener && opener.require)
+            root = opener;
+        else if (parent && parent.require)
+            root = parent;
+        else //Huh?
+            throw "Could not find the AMD loader context";
+
+        root.require(["fusion/core"], function(Fusion) {
+
+        });
+
 	</script>
 </head>
 <body class="taskPaneHelp">
