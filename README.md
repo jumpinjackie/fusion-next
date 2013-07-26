@@ -47,6 +47,7 @@ Widgets currently implemented in fusion-next
  * About
  * Cursor Position
  * Editable Scale
+ * Extent History
  * Invoke Script
  * Pan
  * Refresh Map
@@ -63,6 +64,7 @@ Widgets partially implemented in fusion-next
 Unknowns to address/determine/research
 ======================================
 
+ * How produce API documentation from AMD modules?
  * How best to handle many UI instances mapped to one widget, especially wrt mutual exclusivity
  * How to optimize this down to single-file builds with dojo build system
  * dijit.Tree unknowns
