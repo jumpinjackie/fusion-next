@@ -1,0 +1,15 @@
+{
+    "opts": {
+        "destination": "./apidoc/",
+        "recurse": true
+    },
+    "source": {
+        "include": [
+            "lib/fusion",
+            "lib/widgets"
+        ],
+        "exclude": [],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+}
