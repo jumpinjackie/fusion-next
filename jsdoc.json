@@ -3,13 +3,20 @@
         "destination": "./apidoc/",
         "recurse": true
     },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": "true"
+        }
+    },
     "source": {
         "include": [
             "lib/fusion",
             "lib/widgets"
-        ],
-        "exclude": [],
-        "includePattern": ".+\\.js(doc)?$",
-        "excludePattern": "(^|\\/|\\\\)_"
+        ]
     },
+    "plugins": [
+        "plugins/sourcetag"
+    ]
 }
