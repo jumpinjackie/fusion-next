@@ -3,7 +3,7 @@
     <head>
         <title>Claro</title>
         <link rel="stylesheet" href="../../../assets/style.css">
-        <link rel="stylesheet" href="../../../lib/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="../../../lib/dtk/dijit/themes/claro/claro.css">
         <style type="text/css">
             html, body {
                 width: 100%;
@@ -61,7 +61,27 @@
             }
 
         </style>
-        <script type="text/javascript" src="../../../lib/dojo/dojo.js.uncompressed.js" data-dojo-config="async: true, parseOnLoad: true, debugAtAllCosts: true"></script>
+        <script type="text/javascript">
+
+            dojoConfig = {
+                async: true,
+                parseOnLoad: true,
+                debugAtAllCosts: true,
+                baseUrl: "../../../lib",
+                packages: [
+                    { name: "dojo", location: "dtk/dojo" },
+                    { name: "dijit", location: "dtk/dijit" },
+                    { name: "dojox", location: "dtk/dojox" },
+                    { name: "fusion", location: "fusion" },
+                    { name: "widgets", location: "widgets" },
+                    { name: "openlayers", location: "openlayers" },
+                    { name: "proj4js", location: "proj4js" },
+                    { name: "urijs", location: "urijs" }
+                ]
+            };
+
+        </script>
+        <script type="text/javascript" src="../../../lib/dtk/dojo/dojo.js"></script>
         <script>
             require([
                 "dojo/ready",
