@@ -71,7 +71,7 @@ Unknowns to address/determine/research
     * How to show checkboxes for certain nodes?
     * How to use inline data URIs for icons instead of CSS classes
  * Should we leverage the functionality offered by dojox/geo/openlayers or go our own way? (currently our own way)
- * Stick with per-template HTML entry points, or go with a single global server-side (PHP/ASP.net/Java) entry point that outputs the specific client template
+ * ~~Stick with per-template HTML entry points, or go with a single global server-side (PHP/ASP.net/Java) entry point that outputs the specific client template~~
  * How to load scripts the classic non-AMD way (required for Google Maps/Bing integration)
  * How to load external css stylesheets (for widgets)
  * How to replicate the features of older templates
