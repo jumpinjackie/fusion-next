@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>%s</title>
+        <title>%PAGE_TITLE%</title>
         <link rel="stylesheet" href="assets/style.css">
         <link rel="stylesheet" href="lib/dtk/dijit/themes/claro/claro.css">
         <link rel="stylesheet" href="templates/mapguide/claro/style.css">
@@ -25,9 +25,10 @@
             };
 
         </script>
+        %SCRIPTS%
         <script type="text/javascript" src="lib/dtk/dojo/dojo.js"></script>
         <script>
-            var appDef = %s;
+            var appDef = %APP_DEF%;
 
             require([
                 "dojo/ready",
@@ -48,7 +49,7 @@
                 ready(function() {
                     topic.subscribe(Fusion.Events.FUSION_INITIALIZED, onFusionInitialized);
                     topic.subscribe(Fusion.Events.FUSION_ERROR, onFusionError);
-                    Fusion.initialize({ appDef: appDef, sessionID: '%s' });
+                    Fusion.initialize({ appDef: appDef, sessionID: '%SESSION_ID%' });
                 });
             });
 
