@@ -1,0 +1,55 @@
+{
+  "exports": [
+    "ol.Map",
+    "ol.View",
+    "ol.control.defaults",
+    "ol.format.GeoJSON",
+    "ol.format.KML",
+    "ol.format.WFS",
+    "ol.format.WKT",
+    "ol.layer.Tile",
+    "ol.layer.Image",
+    "ol.layer.VectorTile",
+    "ol.source.BingMaps",
+    "ol.source.ImageMapGuide",
+    "ol.source.ImageWMS",
+    "ol.source.OSM",
+    "ol.source.Stamen",
+    "ol.source.Vector",
+    "ol.source.VectorTile",
+    "ol.source.TileImage",
+    "ol.source.TileUTFGrid",
+    "ol.source.TileWMS",
+    "ol.source.XYZ"
+  ],
+  "umd": true,
+  "compile": {
+    "externs": [
+      "externs/bingmaps.js",
+      "externs/closure-compiler.js",
+      "externs/geojson.js",
+      "externs/oli.js",
+      "externs/olx.js",
+      "externs/proj4js.js",
+      "externs/tilejson.js",
+      "externs/topojson.js"
+    ],
+    "define": [
+      "goog.array.ASSUME_NATIVE_FUNCTIONS=true",
+      "goog.dom.ASSUME_STANDARDS_MODE=true",
+      "goog.json.USE_NATIVE_JSON=true",
+      "goog.DEBUG=false"
+    ],
+    "jscomp_off": [
+      "unknownDefines"
+    ],
+    "extra_annotation_name": [
+      "api", "observable"
+    ],
+    "compilation_level": "ADVANCED_OPTIMIZATIONS",
+    "use_types_for_optimization": true,
+    "manage_closure_dependencies": true,
+    "create_source_map": "../../src/openlayers/ol.js.map",
+    "source_map_format": "V3"
+  }
+}
