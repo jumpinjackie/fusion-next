@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-      "dojo": "1.10.0",
-      "dijit": "1.10.0",
-      "dojox": "1.10.0",
-      "dgrid": "1.0.0",
-      "util": "dojo-util#1.10.0"
+    "dojo": "1.10.0",
+    "dijit": "1.10.0",
+    "dojox": "1.10.0",
+    "dgrid": "1.0.0",
+    "util": "dojo-util#1.10.0",
+    "urijs": "uri.js#~1.17.0"
   }
 }
